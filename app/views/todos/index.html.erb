@@ -1,0 +1,30 @@
+<table class="table" id="todo-list">
+  <thead>
+    <tr>
+      <th class="text-center small-box">ID</th>
+      <th class="text-center small-box">is_done</th>
+      <th class="text-center">todo content</th>
+      <th class="text-center medium-box">created at</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @todos_active.each do |t| %>
+      <tr>
+        <td class="text-center small-box"><%= t.id %></td>
+        <td class="text-center small-box"><%= t.is_done %></td>
+        <td><%= t.content %></td>
+        <td class="text-center medium-box"><%= t.created_at.strftime( "%Y/%m/%d/ %I:%M%p" ) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+  <tbody>
+    <% @todos_done.each do |t| %>
+      <tr class="done">
+        <td class="text-center small-box"><%= t.id %></td>
+        <td class="text-center small-box"><%= t.is_done %></td>
+        <td><%= t.content %></td>
+        <td class="text-center medium-box"><%= t.created_at.strftime( "%Y/%m/%d/ %I:%M%p" ) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
