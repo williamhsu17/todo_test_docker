@@ -1,1 +1,12 @@
 @import "bootstrap";
+
+.small-box {
+  width: 16px;
+}
+.medium-box {
+  max-width: 80px;
+}
+.done {
+  background-color: #ddd;
+  color: #777;
+}
